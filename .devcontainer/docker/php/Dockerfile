@@ -4,9 +4,9 @@ RUN apt-get update && apt-get install -y \
     git \
     unzip \
     && rm -rf /var/lib/apt/lists/*
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /docker-practice
-COPY . .
+COPY ../../.. /docker-practice
 
 RUN a2enmod rewrite
