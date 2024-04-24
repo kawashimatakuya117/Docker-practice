@@ -8,7 +8,7 @@ services:
       context: .
       dockerfile: ./docker/php/Dockerfile
     ports:
-      - "38000:380"
+      - "8000:80"
     volumes:
       - app:/docker-practice
     environment:
@@ -25,7 +25,7 @@ services:
       context: .
       dockerfile: ./docker/mysql/Dockerfile
     ports:
-      - "33306:33306"
+      - "3306:33306"
     volumes:
       - db-laravel-practice-data:/var/lib/mysql
     environment:
