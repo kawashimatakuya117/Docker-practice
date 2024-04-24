@@ -8,16 +8,16 @@ services:
       context: .
       dockerfile: ./docker/php/Dockerfile
     ports:
-      - "8000:80"
+      - "38000:380"
     volumes:
       - app:/docker-practice
     environment:
       - DB_CONNECTION=mysql
       - DB_HOST=127.0.0.1
-      - DB_PORT=3306
+      - DB_PORT=33306
       - DB_DATABASE=products
       - DB_USERNAME=root
-      - DB_PASSWORD=
+      - DB_PASSWORD=secret
 
   db:
     platform: linux/amd64
@@ -25,11 +25,11 @@ services:
       context: .
       dockerfile: ./docker/mysql/Dockerfile
     ports:
-      - "3306:3306"
+      - "33306:33306"
     volumes:
       - db-laravel-practice-data:/var/lib/mysql
     environment:
       - MYSQL_DATABASE=${DB_NAME:-products}
       - MYSQL_USER=${DB_USER:-phper}
-      - MYSQL_PASSWORD=${DB_PASS:-}
+      - MYSQL_PASSWORD=${DB_PASS:-secret}
       - MYSQL_ROOT_PASSWORD=${DB_PASS:-secret}
