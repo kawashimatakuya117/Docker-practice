@@ -1,24 +1,23 @@
 {
-    "name": "products dev container",
-    "dockerComposeFile": "docker-compose.yml",
-    "service": "app",
-    "workspaceFolder": "/docker-practice-workspace",
-
-    "customizations": {
-        "vscode": {
-          "settings": {
-            "editor.tabSize": 4,
-            "phpcs.composerJsonPath": "./products/composer.json",
-            "phpcs.executablePath": "./products/vendor/bin/phpcs",
-            "phpmd.command": "./products/vendor/bin/phpmd",
-            "phpmd.rules": "./products/phpmd.xml"
-        },
-        "extensions": [
-            "ecodes.vscode-phpmd",
-            "bmewburn.vscode-intelephense-client",
-            "shevaua.phpcs"
-        ]
+  "name": "products dev container",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/docker-practice-workspace",
+  "extensions": [
+    "ecodes.vscode-phpmd",
+    "bmewburn.vscode-intelephense-client",
+    "shevaua.phpcs"
+  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.tabSize": 4,
+        "phpcs.composerJsonPath": "./products/composer.json",
+        "phpcs.executablePath": "./products/vendor/bin/phpcs",
+        "phpmd.command": "./products/vendor/bin/phpmd",
+        "phpmd.rules": "./products/phpmd.xml"
       }
-    },
-    "postCreateCommand": "php --version"
+    }
+  },
+  "postCreateCommand": "php --version"
 }
