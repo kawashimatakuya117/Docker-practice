@@ -8,16 +8,12 @@
     "bmewburn.vscode-intelephense-client",
     "shevaua.phpcs"
   ],
-  "customizations": {
-    "vscode": {
       "settings": {
         "editor.tabSize": 4,
         "phpcs.composerJsonPath": "./products/composer.json",
         "phpcs.executablePath": "./products/vendor/bin/phpcs",
         "phpmd.command": "./products/vendor/bin/phpmd",
         "phpmd.rules": "./products/phpmd.xml"
-      }
-    }
-  },
+      },
   "postCreateCommand": "php --version"
 }
