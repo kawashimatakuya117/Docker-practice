@@ -2,19 +2,17 @@
     "name": "products dev container",
     "dockerComposeFile": "docker-compose.yml",
     "service": "app",
-    "workspaceFolder": "/docker-practice-workspace",
+    "workspaceFolder": "/docker-practice",
 
     "customizations": {
         "vscode": {
             "settings": {},
-
             "extensions": [
                 "ecodes.vscode-phpmd",
-            "bmewburn.vscode-intelephense-client",
-            "shevaua.phpcs"
+                "bmewburn.vscode-intelephense-client",
+                "shevaua.phpcs"
             ]
         }
     },
-
     "postCreateCommand": "php --version"
 }
