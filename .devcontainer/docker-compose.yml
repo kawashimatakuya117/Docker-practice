@@ -25,11 +25,11 @@ services:
       context: .
       dockerfile: ./docker/mysql/Dockerfile
     ports:
-      - "33306:3306"
+      - "3306:3306"
     volumes:
       - db-laravel-practice-data:/var/lib/mysql
     environment:
-      - MYSQL_DATABASE=${DB_NAME:-products}
-      - MYSQL_USER=${DB_USER:-phper}
-      - MYSQL_PASSWORD=${DB_PASS:-}
-      - MYSQL_ROOT_PASSWORD=${DB_PASS:-secret}
+      - MYSQL_DATABASE=products
+      - MYSQL_USER=phper
+      - MYSQL_PASSWORD=
+      - MYSQL_ROOT_PASSWORD=secret
